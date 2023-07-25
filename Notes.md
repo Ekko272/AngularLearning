@@ -100,8 +100,30 @@ export class ServersComponent {
 
 **Databinding**
 
+<img width="1515" alt="截屏2023-07-25 12 04 32" src="https://github.com/Ekko272/AngularLearning/assets/122116946/337d66df-b4f4-4aa4-b851-28b5d9a71ae9">
+
+{{}} The content inside this has to be a string. It can be an element or a function as long as it returns a string.
+
+```typescript
+//in HTML template
+<p>{{'Server'}} with ID {{serverId}} is {{serverName}}</p>
 
 
+//in ts
+import { Component } from "@angular/core";
+@Component({
+    selector: 'app-server',
+    templateUrl: './server.component.html'
+})
+export class ServerComponent{
+    serverId: number=10;
+    serverName: string='offline';
+}
+```
+
+**Propertybinding**
+
+[] binding a property
 
 
 
